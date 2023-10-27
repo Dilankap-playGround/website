@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web site</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-family: 'ubuntu', sans-serif;
+            font-size: larger;
+        }
+
+        @media all and (prefers-color-scheme: dark) {
+            :root {
+                background-color: black;
+                color: white;
+            }
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(229, 252, 252, 0.404);
+            display: flex;
+            justify-content: center;
+
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+
+        }
+
+        aside {
+            width: 225px;
+            background-color: rgb(222, 250, 250);
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #mainMiddle {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #mainMiddle img {
+            object-fit: cover;
+        }
+
+        #imageBox {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+        }
+        .manuitems{
+            font-weight: 700;
+        }
+
+        .imageboxclass {
+            padding: 5px;
+            width: 100%;
+        }
+
+        #contentplusimage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+
+        }
+
+        #content {
+            text-align: center;
+            padding: 5px;
+            color: rgb(23, 41, 41);
+            font-size: large;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        li {
+            padding: 10px;
+            font-size: 1.2rem;
+            list-style-type: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: blue;
+           
+                cursor: hand;
+                font-weight: 700;
+                background-color: rgb(175, 223, 223);
+                border-radius: 25%;
+            }
+        }
+
+        @media all and (min-width: 800px) and (max-width: 1200px) {
+            #contentplusimage :last-child {
+                display: none;
+                width: 100%;
+                padding: 5px;
+                margin: auto;
+            }
+
+            #content {
+                font-size: medium;
+            }
+        }
+
+        @media all and (max-width:801px) {
+            #contentplusimage {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #imageBox {
+                flex-direction: column;
+            }
+
+            #mainMiddle #add {
+                display: none;
+            }
+
+            main {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            main aside {
+                background-color: rgba(240, 248, 255, 0);
+
+
+            }
+
+            #content {
+                font-size: medium;
+                font-weight: 600;
+            }
+            #contentplusimage img{
+                width: 100%;
+                padding: 5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header><img src="img/logo.png" alt="logo"></header>
+    <main>
+        <aside>
+            <ul id="manu">
+                <li class="manuitems">Home</li>
+                <li class="manuitems">Sevices</li>
+                <li class="manuitems">About Us</li>
+                <li class="manuitems">Contact us</li>
+            </ul>
+        </aside>
+        <div id="mainMiddle">
+            <img id="add" src="img/img2.avif" alt="image" width="100%" height="50%">
+            <div id="contentplusimage">
+                <div id="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est explicabo molestiae
+                    error quos. Magni suscipit atque quo minima autem necessitatibus consectetur minus. Delectus dolore
+                    obcaecati, iure fuga voluptas incidunt sunt.</div>
+                <img src="img/images.jpeg" alt="">
+            </div>
+            <div id="imageBox">
+                <img class="imageboxclass" src="img/imagbox1.avif" alt="">
+                <img class="imageboxclass" src="img/imagebox2.avif" alt="">
+                <img class="imageboxclass" src="img/imagebox2.avif" alt="">
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        CopyRight@Dilanka
+    </footer>
+
+</body>
+
+</html>
